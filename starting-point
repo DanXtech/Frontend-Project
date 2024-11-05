@@ -1,0 +1,337 @@
+
+    <div class="overlay"></div>
+    <div class="wrapper">
+        <header>
+            <a href="#"><img src="https://assets.codepen.io/2621168/logo_2.svg" alt="Logo"></a>
+
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="left-col">
+                <h1>Quality apparel without the price tag</h1>
+                <p class="subhead">No need to spend $xxx on apparel just for the name’s sake. Our premium apparel is made from the same stuff.</p>
+                
+                <div class="cta-btns">
+                    <a href="#" class="primary-cta">Browse our collection</a>
+                    <a href="#" class="secondary-cta">
+                        <span>Spring '23 Collection</span>
+                        <svg viewBox="0 0 19 9" fill="none">
+                            <path d="M18.3536 4.85355C18.5488 4.65829 18.5488 4.34171 18.3536 4.14645L15.1716 0.964466C14.9763 0.769204 14.6597 0.769204 14.4645 0.964466C14.2692 1.15973 14.2692 1.47631 14.4645 1.67157L17.2929 4.5L14.4645 7.32843C14.2692 7.52369 14.2692 7.84027 14.4645 8.03553C14.6597 8.2308 14.9763 8.2308 15.1716 8.03553L18.3536 4.85355ZM0 5H18V4H0V5Z" fill="black"/>
+                        </svg> 
+                    </a>
+                </div>
+
+                <div class="news">
+                    <p class="employees">50K</p>
+                    <p class="details">We’re proud to announce that we now employ a workflorce of over <strong>50,000</strong>. It’s all possible because of you.</p>
+                </div>
+            </div>
+
+            <div class="right-col">
+                <div class="card card1">
+                    <div class="card-details">
+                        <div>
+                            <a href="#" class="product-title">Fauxica Sport</a>
+                            <p>Running shoe</p>
+                        </div>
+                        <p class="product-price">$59</p>
+                    </div>
+                </div>
+                <div class="card card2">
+                    <div class="card-details">
+                        <div>
+                            <a href="#" class="product-title">Fauxica Sport</a>
+                            <p>Running shoe</p>
+                        </div>
+                        <p class="product-price">$59</p>
+                    </div>
+                </div>
+                <div class="card card3">
+                    <div class="card-details">
+                        <div>
+                            <a href="#" class="product-title">Fauxica Sport</a>
+                            <p>Running shoe</p>
+                        </div>
+                        <p class="product-price">$59</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header & Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    margin: 4em;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    gap: 3.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+nav ul li a.active:before {
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgb(152, 152, 152);
+    bottom: -6px;
+    transition: width .3s;
+}
+
+
+/* Hero Section */
+
+main {
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+    flex: 1 3;
+}
+
+.left-col {    
+    width: 45%;
+}
+.right-col {
+    flex-grow: 1;
+}
+h1 {
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    font-size: 5.2rem;
+    margin:0;
+}
+.subhead {
+    font-size: 1.8rem;
+}
+.cta-btns {
+    margin: 5em 0;
+}
+.cta-btns, .secondary-cta {
+    display: flex;
+    gap: 2em;
+}
+.primary-cta {
+    background: #F2F0DF;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+.secondary-cta {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1em 0;
+}
+.secondary-cta svg {
+    width: 20px;
+    transition: transform .3s;
+}
+
+.news {
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid black;
+    border-radius: 1.9em;
+    position: relative;
+}
+.news:before {
+    position: absolute;
+    content: "";
+    background: url('https://assets.codepen.io/2621168/confetti.svg');
+    top: -20px;
+    left: -20px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+}
+p.employees {
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+}
+p.details {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* Right column gallery */
+
+.right-col {
+    display: grid;
+    gap: 2.9em;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+        "left right"
+        "left bottom";
+}
+
+.card {
+    border-radius: 1.9em;
+    padding: 1.6em;
+    background-size: 150%;
+    display: flex;
+    align-items: end;
+    transition: background-size .3s;
+}
+
+.card1 {
+    grid-area: left;
+    background-image: url('https://assets.codepen.io/2621168/clothing1.jpg');
+    position: relative;
+}
+
+.card1:before {
+    position: absolute;
+    content: "";
+    background: url('https://assets.codepen.io/2621168/tag.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+}
+
+.card2 {
+    grid-area: right;
+    background-image: url('https://assets.codepen.io/2621168/clothing2.jpg');
+}
+.card3 {
+    grid-area: bottom;
+    background-image: url('https://assets.codepen.io/2621168/clothing3.jpg');
+    background-position: 50%;
+}
+
+.card-details {
+    background: white;
+    border-radius: 1em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform .3s;
+}
+
+.card-details a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.card-details p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+p.product-price {
+    font-size: 1.8rem;
+}
+
+
+/* Microinteractions */ 
+
+nav ul li a:hover:before {
+    width: 35%;
+}
+
+.primary-cta:hover {
+    background: #e3e0c7;
+}
+
+.secondary-cta:hover svg {
+    transform: translateX(10px);
+}
+
+.card:hover {
+    background-size: 160%;
+}
+
+.card:hover .card-details {
+    transform: translateY(-20px);
+}
+
+/* Intro Animation */
+
+.overlay {
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from {
+        transform: scaleY(1);
+    }
+    to {
+        transform: scaleY(0);
+    }
+}
+
+main {
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+
+@keyframes growIn {
+    to {
+        transform: scale(1);
+    }
+}
